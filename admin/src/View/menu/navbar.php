@@ -50,11 +50,6 @@
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
             </li>
         </ul>
-
-        <form action="index.php?page=search-product" method="post" class="form-inline my-2 my-lg-0">
-            <input type="text" name="keyword" placeholder="search" class="form-control mr-sm-2">
-            <input type="submit" class="btn btn-outline-warning my-2 my-sm-0" value="Search">
-        </form>
-        <a href="index.php?page=logout" class="btn btn-danger">Log out</a>
+        <a href="index.php?page=logout" class="btn btn-outline-danger">Log out</a>
     </div>
 </nav>

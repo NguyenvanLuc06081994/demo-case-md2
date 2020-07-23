@@ -1,11 +1,4 @@
 
-    <style>
-
-        td,th {
-            border: 1px solid black;
-        }
-    </style>
-
     <table class="table table-hover">
 
         <tr>

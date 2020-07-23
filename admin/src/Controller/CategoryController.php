@@ -69,4 +69,10 @@ class CategoryController
             include('src/View/category/list.php');
         }
     }
+
+    public function getAll()
+    {
+        $categories = $this->categoryController->getAllCategories();
+        include('front/menu/navbar.php');
+    }
 }

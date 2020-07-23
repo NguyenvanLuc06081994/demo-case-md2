@@ -1,4 +1,8 @@
-#all-product img {
-    height: 100px;
-    width: 100px;
+.all-product img, .box-detail img {
+    width: 100%;
+    height: 100%;
+}
+
+.all-product  > a {
+    display: flex;
 }

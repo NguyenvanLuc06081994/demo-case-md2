@@ -43,7 +43,7 @@ class ProductController
             $quantity = $_POST['quantity'];
             $description = $_POST['description'];
             $category_id = $_POST['category_id'];
-            $product = new Product($path, $name, $price, $quantity, $description,$category_id);
+            $product = new Product($path, $name, $price, $quantity, $description, $category_id);
             $this->productController->addProduct($product);
             header("location:index.php");
         }
@@ -84,13 +84,16 @@ class ProductController
             header("location:index.php");
         }
     }
-    public function detailProduct() {
-        if($_SERVER['REQUEST_METHOD'] == "GET") {
+
+    public function detailProduct()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == "GET") {
             $id = $_REQUEST['id'];
             $product = $this->productController->getProductId($id);
             include('front/product/detail-product.php');
         }
-        }
+    }
+
     public function getAllProductFront()
     {
         $products = $this->productController->getAllProduct();
@@ -108,8 +111,12 @@ class ProductController
         }
     }
 
-    public function returnView()
+    public function searchProductById($id)
     {
-        $this->getAllProduct();
+        $categoryObj = new CategoryManager();
+        $categories = $categoryObj->getAllCategories();
+        $products = $this->productController->searchByCategory($id);
+        include('front/product/listProductByCat.php');
     }
+
 }

@@ -1,8 +1,4 @@
 
-<?php
-//echo "<pre>";
-//print_r($cartCurrent);
-//?>
 <table class="table table-hover">
     <tr>
         <th>Product Name</th>

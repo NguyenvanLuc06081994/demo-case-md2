@@ -1,11 +1,11 @@
 <style>
     th, td {
-        border: 1px solid black;
-        text-align: center;
+        /*border: 1px solid black;*/
+        /*text-align: center;*/
     }
 
     table {
-        width: 100%;
+        width: 50%;
     }
 
 </style>
@@ -18,7 +18,7 @@
         </tr>
         <tr>
             <th>Phone</th>
-            <td><?php echo $billDetails[0]['phone'] ?></td>
+            <td><?php echo  $billDetails[0]['phone'] ?></td>
         </tr>
         <tr>
             <th>Email</th>
@@ -30,7 +30,7 @@
         </tr>
         <tr>
             <th>Total Price</th>
-            <td><?php echo $billDetails[0]['totalPrice'] ?></td>
+            <td><?php echo number_format($billDetails[0]['totalPrice'])." VND"  ?></td>
         </tr>
         <tr>
             <th>Status</th>
@@ -75,7 +75,7 @@
                 <td><?php echo $bills[1] ?></td>
                 <td><?php echo $bills[0] ?></td>
                 <td><?php echo $bills['quantity'] ?></td>
-                <td><?php echo $bills['price'] ?></td>
+                <td><?php echo number_format($bills['price'])." VND"  ?></td>
 
 
             </tr>
@@ -83,5 +83,3 @@
     <?php endif; ?>
 </table>
 <?php
-echo "<pre>";
-print_r($billDetails); ?>

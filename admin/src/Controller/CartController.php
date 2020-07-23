@@ -76,7 +76,7 @@ class CartController
                 $this->detailManager->addDetail($detail);
             endforeach;
             $_SESSION['cart'] = [];
-            header('location:index.php');
+            header('location:front/cart/success.php');
 
         }
     }

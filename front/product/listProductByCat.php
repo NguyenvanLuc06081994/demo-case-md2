@@ -1,5 +1,5 @@
+
 <div class="row">
-    <h3 class="w-100">All Product</h3>
     <?php foreach ($products as $key => $product) : ?>
         <div class="col-md-3 text-center all-product">
             <a><img src="admin/<?php echo $product->getImg() ?>" alt=""/></a>
