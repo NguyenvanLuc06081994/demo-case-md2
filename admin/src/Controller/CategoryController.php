@@ -72,7 +72,10 @@ class CategoryController
 
     public function getAll()
     {
-        $categories = $this->categoryController->getAllCategories();
-        include('front/menu/navbar.php');
+        //        var_dump($categories);
+        return $this->categoryController->getAllCategories();
+
+
+//        include('front/menu/navbar.php');
     }
 }

@@ -10,7 +10,6 @@ class ProductController
 {
     protected $productController;
 
-
     public function __construct()
     {
         $this->productController = new ProductManager();
@@ -97,7 +96,9 @@ class ProductController
     public function getAllProductFront()
     {
         $products = $this->productController->getAllProduct();
-        include('front/product/list.php');
+        $categoryObj = new CategoryManager();
+        $categories = $categoryObj->getAllCategories();
+        include_once('front/product/list.php');
     }
 
     public function searchProduct()

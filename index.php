@@ -9,6 +9,7 @@ use App\Controller\CartController;
 $products = new ProductController();
 $carts = new CartController();
 $categories = new CategoryController();
+
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +65,7 @@ if (isset($_GET['page']) != 'detail-product'){
     </div>
 
 </div>
-
+<?php  ?>
 
 </body>
 </html>

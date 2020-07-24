@@ -1,3 +1,14 @@
+<?php
+
+use App\Controller\CategoryController;
+
+require __DIR__ . "/../../admin/vendor/autoload.php";
+
+$category = new CategoryController();
+
+$categories=$category->getAll();
+
+?>
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -11,27 +22,20 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <!--                    <li class="nav-item">-->
-                <!--                        <a class="nav-link" href="#">Link</a>-->
-                <!--                    </li>-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">Products</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="index.php?page=search-product&id=1">Iphone</a>
-                        <a class="dropdown-item" href="index.php?page=search-product&id=2">SamSung</a>
-                        <a class="dropdown-item" href="index.php?page=search-product&id=3">Oppo</a>
+                        <?php foreach ($categories as $key => $category): ?>
+                        <a class="dropdown-item" href="index.php?page=search-product&id=<?php echo $category->getId()?>"><?php echo $category->getName() ?></a>
+
+                        <?php endforeach; ?>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?page=list-cart"><i class="fas fa-shopping-cart"></i></a>
                 </li>
             </ul>
-            <!--                <form class="form-inline my-2 my-lg-0">-->
-            <!--                    <input class="form-control mr-sm-2" type="text" placeholder="Search">-->
-            <!--                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-            <!--                </form>-->
         </div>
     </div>
 </nav>
-<?php //var_dump($categories); ?>

@@ -9,6 +9,6 @@
 </head>
 <body>
     <p>Ban da dat hang thanh cong</p>
-    <a href="../../index.php" class="btn btn-primary">Quay Ve Trang chu</a>
+    <a href="../../index.php" class="btn btn-primary">Back To Home</a>
 </body>
 </html>
